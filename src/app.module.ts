@@ -1,7 +1,6 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { Module1Module } from './modules/module1/module1.module';
 import { CustomersModule } from './modules/customers/customers.module';
 import configuration from './config/configuration';
 
@@ -18,7 +17,6 @@ import configuration from './config/configuration';
       }),
       inject: [ConfigService],
     }),
-    Module1Module,
     CustomersModule,
   ],
   controllers: [],
