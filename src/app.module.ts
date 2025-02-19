@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { CustomersModule } from './modules/customers/customers.module';
+import { ShortenedUrlModule } from './modules/shortened-url/shortened-url.module';
 import configuration from './config/configuration';
 
 @Module({
@@ -18,6 +19,7 @@ import configuration from './config/configuration';
       inject: [ConfigService],
     }),
     CustomersModule,
+    ShortenedUrlModule,
   ],
   controllers: [],
   providers: [],
